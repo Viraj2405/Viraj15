@@ -1,0 +1,15 @@
+mysql -u root -p
+> create database employee;
+> show databases;
+> use employee;
+> create table employee1(
+    -> empid int primary key,
+    -> empname varchar(40),
+    -> empsal int);
+> create table salary as select empid,empsal from employee1;
+> alter table employee1 add empaddress varchar(100);
+> desc employee1;
+> alter table employee1 drop column empaddress;
+> desc salary;
+>insert into employee1 values(102, 'Vijay', 1000), (103,’Sujay',3000);
+>select * from employee1;
